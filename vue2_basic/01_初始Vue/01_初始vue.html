@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="apple.ico" class="con">
+  <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+  <!-- 初识Vue:
+    1.想让Vue工作，就必须创建一个Vue实例，且要传入一个配置对象;
+    2.root容器里的代码依然符合htm1规范，只不过混入了一些特殊的Vue语法;
+    3.root容器里的代码被称为[Vue模板] : -->
+  <div id="root">
+    <h1>Hello ,{{name.toUpperCase()}},{{age}},{{address}} </h1>
+  </div>
+
+  <script type="text/javascript">
+    Vue.config.produtionTip = false
+
+    //创建Vue实例
+    new Vue({
+      el:'#root',
+      data:{
+        name:'mapeng',
+        age:'20',
+        address:'北京'
+      }
+    })
+
+  </script>
+</body>
+</html>
+
+
